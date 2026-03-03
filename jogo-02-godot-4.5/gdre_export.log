@@ -1,0 +1,41 @@
+GDRE Tools v2.4.0
+Ubuntu 24.04.4 LTS 24.04, AMD Radeon 680M (RADV REMBRANDT), vulkan
+Opening file: ~/snap/steam/common/.local/share/Steam/steamapps/common/Godot Engine/projeto_2_janela.pck
+Loaded 3391 imported files
+Detected Engine Version: 4.5.1
+Detected Bytecode Revision: 4.5.0-stable (ebc36a7)
+Successfully loaded PCK!
+Version: 4.5.1
+Verified 6786 files, no errors detected!
+Extracted 6786 files, no errors detected!
+ERROR: Failed to find gdextension libraries for plugin res://addons/godotsteam_server/godotsteam_server.gdextension
+   at: export_resource (modules/gdsdecomp/exporters/gdextension_exporter.cpp:195)
+Saved project config.
+
+
+********************************EXPORT REPORT********************************
+
+Totals:                                 
+Decompiled scripts:                     33
+Failed scripts:                         0
+Imported resources for export session:  3391
+Successfully converted:                 3390
+Lossy:                                  1
+Rewrote metadata:                       3324
+Non-importable conversions:             0
+Not converted:                          0
+Failed conversions:                     1
+-------------
+
+
+
+------------------------------------------------------------------------------------
+
+Use Godot editor version 4.5.1 to edit the project.
+Note: the project may be using a custom version of Godot. Detection for this has not been implemented yet.
+If you find that you have many non-import errors upon opening the project 
+(i.e. scripts or shaders have many errors), use the original game's binary as the export template.
+
+*******************************************************************************
+
+Recovery finished in 00m04s

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmssgbl8k5np1"]
+
+[ext_resource type="Script" uid="uid://csh68d86h3vq2" path="res://camera.gd" id="1"]
+
+[node name="Camera2D" type="Camera2D"]
+zoom = Vector2(3, 3)
+limit_smoothed = true
+position_smoothing_speed = 0.2
+script = ExtResource("1")
+
+[node name="Label" type="Label" parent="."]
+z_index = 17
+offset_left = -259.0
+offset_top = -151.0
+offset_right = -205.0
+offset_bottom = -119.0

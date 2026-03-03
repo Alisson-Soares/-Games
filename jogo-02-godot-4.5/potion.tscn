@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=3 uid="uid://dmn6bdm1l62ic"]
+
+[ext_resource type="Script" uid="uid://cntmib86g2vbv" path="res://potion.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dtpotwy0jqlnb" path="res://Bubbly Brew Bottle - GREEN - Spritesheet.png" id="2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_174ht"]
+atlas = ExtResource("2")
+region = Rect2(0, 0, 18, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8parx"]
+atlas = ExtResource("2")
+region = Rect2(18, 0, 18, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18ay0"]
+atlas = ExtResource("2")
+region = Rect2(36, 0, 18, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3y02"]
+atlas = ExtResource("2")
+region = Rect2(54, 0, 18, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_446dp"]
+atlas = ExtResource("2")
+region = Rect2(72, 0, 18, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rdobt"]
+atlas = ExtResource("2")
+region = Rect2(90, 0, 18, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2gw42"]
+atlas = ExtResource("2")
+region = Rect2(108, 0, 18, 35)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8qgj5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_174ht")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8parx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18ay0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3y02")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_446dp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rdobt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2gw42")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_muqj0"]
+size = Vector2(34, 41)
+
+[node name="potion" type="Area2D" groups=["enemy"]]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8qgj5")
+autoplay = "default"
+frame = 2
+frame_progress = 0.013147142
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_muqj0")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

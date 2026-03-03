@@ -1,0 +1,36 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://y72hf3u2nd4x"
+path="res://.godot/imported/Classic Jar - BLACK - 0012.png-3323a3e66be40c59f5dd9e4728e51b5b.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Pixel Potion Pack/Pixel Potion Pack - FINISHED/Classic Jar/BLACK/Sprites/Classic Jar - BLACK - 0012.png"
+dest_files=["res://.godot/imported/Classic Jar - BLACK - 0012.png-3323a3e66be40c59f5dd9e4728e51b5b.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=1.0
+compress/uastc_level=2
+compress/rdo_quality_loss=0
+compress/hdr_compression=0
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=false
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

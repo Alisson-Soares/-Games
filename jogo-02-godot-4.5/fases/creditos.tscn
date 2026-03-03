@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgt8spra6csrx"]
+
+[ext_resource type="Script" uid="uid://7rnqo5oep4c7" path="res://fases/creditos.gd" id="1"]
+
+[node name="creditos" type="Node2D"]
+script = ExtResource("1")
+
+[node name="agradecimentos" type="Label" parent="."]
+offset_left = -144.0
+offset_top = -74.0
+offset_right = 148.0
+offset_bottom = 1.0
+text = "incrivel conquista ao finalizar o jogo.
+Espero que seja possui nos encontrar 
+                        novamente"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+
+[node name="score e tempo de jogo" type="Label" parent="."]
+offset_left = -115.0
+offset_top = 13.0
+offset_right = 256.0
+offset_bottom = 234.0

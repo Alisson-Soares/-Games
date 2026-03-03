@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3lo5dht3djki"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m1mjt"]
+size = Vector2(135, 37)
+
+[node name="player_attack" type="Area2D"]
+collision_layer = 16
+collision_mask = 0
+
+[node name="attack_collision" type="CollisionShape2D" parent="."]
+scale = Vector2(0.26154703, 0.7247507)
+shape = SubResource("RectangleShape2D_m1mjt")
+disabled = true

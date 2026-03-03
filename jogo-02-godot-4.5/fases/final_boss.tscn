@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dyqoovll8sl04"]
+
+[node name="final_fase" type="Node2D"]
+
+[node name="tile_set" type="Node2D" parent="."]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="tile_set"]

@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://ih8ikfa5tw4n"]
+
+[ext_resource type="Texture2D" uid="uid://dk1d11qe8iqrw" path="res://Pixel Art Top Down - Basic v1.2.2/Texture/Extra/TX Props with Shadow.png" id="1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uw33f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4jty"]
+atlas = ExtResource("1")
+region = Rect2(212, 82, 53, 82)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jcf13"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g4jty")
+}],
+"loop": true,
+"name": &"stop",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffgcv"]
+atlas = ExtResource("1")
+region = Rect2(266, 82, 14, 82)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_072o2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffgcv")
+}],
+"loop": true,
+"name": &"ativado",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4jty"]
+size = Vector2(91, 96)
+
+[node name="animated_plate" type="StaticBody2D"]
+z_index = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_uw33f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -9)
+sprite_frames = SubResource("SpriteFrames_jcf13")
+animation = &"stop"
+
+[node name="anim_efect" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, -9)
+sprite_frames = SubResource("SpriteFrames_072o2")
+animation = &"ativado"
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(1.7391547, 1.4160674)
+collision_layer = 0
+collision_mask = 16
+
+[node name="Hitbox" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_g4jty")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
